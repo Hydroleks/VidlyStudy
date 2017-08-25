@@ -19,7 +19,7 @@ namespace Vidly
             routes.MapRoute(
                 "MoviesByReleasDate",                   // name of route
                 "movies/released/{year}/{month}",       // url pattern
-                new { controller = "Movies", action = "ByReleaseDate" }  // default arguments - ByReleaseDate action must exist in Movies Controller
+                new { controller = "Movies", action = "ByReleaseDate" },  // default arguments - ByReleaseDate action must exist in Movies Controller
                 new { year = @"\d{4}", month = @"\d{2}" } );     // constraint through regular expressions.
             // new { year = @"2015|2016", month = @"\d{2}" } );     // constraint through regular expressions. year only 2015 or 2016
 
