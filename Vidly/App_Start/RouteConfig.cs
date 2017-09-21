@@ -12,6 +12,16 @@ namespace Vidly
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+   
+ /*
+            //Customers route
+            //before default rout
+            //order of these routes must be most specific to most generic last.
+            routes.MapRoute(
+                "Customers",                   // name of route
+                "Customers/Details/{id}",       // url pattern
+                new { controller = "Customers", action = "Details" },  // default arguments - Details action must exist in Customers Controller
+                new { id = @"\d{2}" });     // constraint through regular expressions.
 
             //custom route
             //before default rout
@@ -22,7 +32,7 @@ namespace Vidly
                 new { controller = "Movies", action = "ByReleaseDate" },  // default arguments - ByReleaseDate action must exist in Movies Controller
                 new { year = @"\d{4}", month = @"\d{2}" } );     // constraint through regular expressions.
             // new { year = @"2015|2016", month = @"\d{2}" } );     // constraint through regular expressions. year only 2015 or 2016
-
+*/
 
             routes.MapRoute(
                 name: "Default",

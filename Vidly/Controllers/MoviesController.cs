@@ -50,19 +50,20 @@ namespace Vidly.Controllers
         }
 
         //movies
-        public ActionResult Index(int? pageIndex, string sortBy)
+        public ActionResult Index()
         {
-            if(!pageIndex.HasValue)
-            {
-                pageIndex = 1;
-            }
+            var movies = GetMovies();
 
-            if(String.IsNullOrWhiteSpace(sortBy))
-            {
-                sortBy = "Name";
-            }
+            return View(movies);
+        }
 
-            return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+        public List<Movie> GetMovies()
+        {
+            return new List<Movie>
+            {
+                new Movie { Id = 1, Name = "Men In Black" },
+                new Movie { Id = 2, Name = "Shrek" },
+            };
         }
     }
 }
