@@ -247,6 +247,10 @@
     <Compile Include="Migrations\201710290700492_PopulateGenresTable.Designer.cs">
       <DependentUpon>201710290700492_PopulateGenresTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711050559375_AddMovieDateStockDetails.cs" />
+    <Compile Include="Migrations\201711050559375_AddMovieDateStockDetails.Designer.cs">
+      <DependentUpon>201711050559375_AddMovieDateStockDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -369,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710290700492_PopulateGenresTable.resx">
       <DependentUpon>201710290700492_PopulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711050559375_AddMovieDateStockDetails.resx">
+      <DependentUpon>201711050559375_AddMovieDateStockDetails.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
