@@ -70,18 +70,9 @@ namespace Vidly.Controllers
             return View(movies);
         }
 
-        public List<Movie> GetMovies()
-        {
-            return new List<Movie>
-            {
-                new Movie { Id = 1, Name = "Men In Black" },
-                new Movie { Id = 2, Name = "Shrek" },
-            };
-        }
-
         public ActionResult Details(int id)
         {
-            var movie = GetMovies().SingleOrDefault(m => m.Id == id);
+            var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
 
             if (movie == null)
                 return HttpNotFound();
