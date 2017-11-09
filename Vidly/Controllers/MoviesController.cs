@@ -83,20 +83,17 @@ namespace Vidly.Controllers
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
-            //var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
 
             var viewModel = new MovieFormViewModel
             {
                 Genres = genres
             };
 
-            return View(viewModel);
+            return View("MovieForm", viewModel);
         }
 
-        public ActionResult Edit()
+        public ActionResult Edit(int id)
         {
-            return View();
-/*
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
 
             if (movie == null)
@@ -109,7 +106,6 @@ namespace Vidly.Controllers
             };
 
             return View("MovieForm", viewModel);
-            */
         }
 
         [HttpPost]
