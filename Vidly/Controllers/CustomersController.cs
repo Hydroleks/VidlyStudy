@@ -23,6 +23,11 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
+        public ActionResult New()
+        {
+            return CustomerForm();
+        }
+
         public ActionResult CustomerForm()
         {
             var memberShipTypes = _context.MembershipTypes.ToList();
