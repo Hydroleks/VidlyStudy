@@ -255,6 +255,10 @@
     <Compile Include="Migrations\201711090013392_FixingMoviesGenreIDIssue.Designer.cs">
       <DependentUpon>201711090013392_FixingMoviesGenreIDIssue.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711190522094_AddedDataAnnotationForMovieRequiredFields.cs" />
+    <Compile Include="Migrations\201711190522094_AddedDataAnnotationForMovieRequiredFields.Designer.cs">
+      <DependentUpon>201711190522094_AddedDataAnnotationForMovieRequiredFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -388,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711090013392_FixingMoviesGenreIDIssue.resx">
       <DependentUpon>201711090013392_FixingMoviesGenreIDIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711190522094_AddedDataAnnotationForMovieRequiredFields.resx">
+      <DependentUpon>201711190522094_AddedDataAnnotationForMovieRequiredFields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
